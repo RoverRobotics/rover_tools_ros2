@@ -10,9 +10,8 @@ The first time you run rover tools run these commands to install necessary depen
 
 ```
 cd ~/
-git clone https://github.com/roverrobotics/rover_tools -b 1.1.1
+git clone https://github.com/roverrobotics/rover_tools_ros2
 cd ~/rover_tools
-./install.sh
 ```
 
 # usage
@@ -21,43 +20,6 @@ cd ~/rover_tools
 cd ~/rover_tools
 ./start.sh
 ```
-
-## Menu Options
-
-<ol>
-  <li>Install
-    <ol>
-    <li>pro_ros1</li>
-    <li>zero2_ros1</li>
-    <li>mini_ros1</li>
-    <li>pro2_ros1</li>
-    <li>Return to Rover Tools</li>
-    </ol>
-  </li>
-  <li>Calibrate
-    <ol>
-    <li>pro_2WD_ros1</li>
-    <li>pro_4WD_ros1</li>
-    <li>zero2_2WD_ros1</li>
-    <li>zero2_4WD_ros1</li>
-    <li>pro2_2WD_ros1</li>
-    <li>mini_2WD_ros1</li>
-    <li>Return to Rover Tools</li>
-    </ol>
-  </li>
-  <li>Test
-    <ol>
-    <li>pro_2WD_ros1</li>
-    <li>pro_4WD_ros1</li>
-    <li>zero2_2WD_ros1</li>
-    <li>zero2_4WD_ros1</li>
-    <li>pro2_2WD_ros1</li>
-    <li>mini_2WD_ros1</li>
-    <li>Return to Rover Tools</li>
-    </ol>
-  </li>
-  <li>Exit</li>
-</ol>
 
 # Troubleshooting
 If the install script has failed, view the detailed log by running the following command
