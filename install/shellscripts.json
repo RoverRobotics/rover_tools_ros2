@@ -17,6 +17,15 @@
             ]
         }
     ],
+     "install_utils": [
+        {
+            "utils": [
+                "sudo apt-get install git nano can-utils net-tools openssh-server ros-$DISTRO-desktop python3-rosdep2 python3-colcon-common-extensions ros-$DISTRO-robot-localization",
+                "source ~/opt/ros/$DISTRO/setup.bash",
+                "source install/setup.sh"
+            ]
+        }
+    ],
     "install_slampack": [
         {
             "clone_source_and_build": [
