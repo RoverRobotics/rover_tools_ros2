@@ -24,6 +24,8 @@ sudo apt install python3-rosdep2
 rosdep update
 sudo apt install python3-colcon-common-extensions
 
+cwd=$(pwd)
+cf="${cwd}/../credentials.json"
 python3 ~/rover_tools_ros2/menu/menu_main.py --cf ${cf}
 source ~/opt/ros/humble/setup.bash
 source ~/rover_workspace/install/setup.sh
