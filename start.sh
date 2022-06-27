@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update
-sudo apt upgrade
+sudo apt full-upgrade
 sudo apt-get install python3-pip -y
 sudo apt-get install screen -y
 sudo apt-get install nano -y
