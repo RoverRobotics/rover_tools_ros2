@@ -235,14 +235,14 @@
             "download_roverrobotics_ros2": [
                 "mkdir -p ~/rover_workspace/src",
                 "cd ~/rover_workspace/src/",
+                "git clone $KEY_ROVER_ROS2",
                 "cd ~/rover_workspace",
                 "rosdep install -i --from-path src --ignore-src",
-                "git clone $KEY_ROVER_ROS2",
                 "if [ -d ~/rover_workspace/src/$KEYV_ROVER_ROS2 ]",
                 "then",
-                "    echo \"download_roverrobotics_ros1: Success\" >> $KEY_VERIFICATION_FILE",
+                "    echo \"download_roverrobotics_ros2: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
-                "    echo \"download_roverrobotics_ros1: Failure\" >> $KEY_VERIFICATION_FILE",
+                "    echo \"download_roverrobotics_ros2: Failure\" >> $KEY_VERIFICATION_FILE",
                 "fi"
             ],
             "download_librover": [

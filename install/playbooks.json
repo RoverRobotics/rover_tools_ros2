@@ -2,6 +2,7 @@
     "Rover Mini ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "roverrobotics_ros2",
         "can_service",
@@ -13,6 +14,7 @@
     "Rover Mega ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "roverrobotics_ros2",
         "can_service",
@@ -24,6 +26,7 @@
     "Rover Pro ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "create_udev",
         "roverrobotics_ros2",
@@ -36,6 +39,7 @@
     "Rover Zero2 ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "create_udev",
         "roverrobotics_ros2",
