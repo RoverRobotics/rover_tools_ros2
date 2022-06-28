@@ -17,7 +17,8 @@
             ]
         }
     ],
-     "install_utils": [
+    
+    "install_utils": [
         {
             "utils": [
                 "sudo apt-get install git nano can-utils net-tools openssh-server ros-$DISTRO-desktop python3-rosdep2 python3-colcon-common-extensions ros-$DISTRO-robot-localization",
@@ -139,7 +140,7 @@
             ]
         }
     ],
-    "rover_startup_script_pro2": [
+    "rover_startup_script_pro": [
         {
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
@@ -147,7 +148,7 @@
                 "source ~/rover_workspace/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyACM0",
-                "ros2 launch roverrobotics_driver pro2_teleop.launch.py",
+                "ros2 launch roverrobotics_driver pro_teleop.launch.py",
                 "PID=$!",
                 "wait \"$PID\"",
                 "EOF2",
@@ -161,7 +162,7 @@
             ]
         }
     ],
-    "rover_startup_script_zero2": [
+    "rover_startup_script_zero": [
         {
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
@@ -169,7 +170,7 @@
                 "source ~/rover_workspace/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyACM0",
-                "ros2 launch roverrobotics_driver zero2_teleop.launch.py",
+                "ros2 launch roverrobotics_driver zero_teleop.launch.py",
                 "PID=$!",
                 "wait \"$PID\"",
                 "EOF2",
@@ -298,11 +299,11 @@
             ]
         }
     ],
-    "setup_launch_zero2": [
+    "setup_launch_zero": [
         {
             "replace_launch_file": [
-                "sudo sed -i 's/placeholder/$KEY_ZERO2_LAUNCH/g' /usr/sbin/roverrobotics",
-                "if grep \"$KEY_ZERO2_LAUNCH\" /usr/sbin/roverrobotics",
+                "sudo sed -i 's/placeholder/$KEY_ZERO_LAUNCH/g' /usr/sbin/roverrobotics",
+                "if grep \"$KEY_ZERO_LAUNCH\" /usr/sbin/roverrobotics",
                 "then",
                 "    echo \"replace_launch_file: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
@@ -311,11 +312,11 @@
             ]
         }
     ],
-    "setup_launch_pro2": [
+    "setup_launch_pro": [
         {
             "replace_launch_file": [
-                "sudo sed -i 's/placeholder/$KEY_PRO2_LAUNCH/g' /usr/sbin/roverrobotics",
-                "if grep \"$KEY_ZERO2_LAUNCH\" /usr/sbin/roverrobotics",
+                "sudo sed -i 's/placeholder/$KEY_PRO_LAUNCH/g' /usr/sbin/roverrobotics",
+                "if grep \"$KEY_PRO_LAUNCH\" /usr/sbin/roverrobotics",
                 "then",
                 "    echo \"replace_launch_file: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
