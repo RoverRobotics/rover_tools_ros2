@@ -2,6 +2,7 @@
     "Rover Mini ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "roverrobotics_ros2",
         "can_service",
@@ -13,6 +14,7 @@
     "Rover Mega ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
         "roverrobotics_ros2",
         "can_service",
@@ -24,25 +26,25 @@
     "Rover Pro ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
-        "create_udev",
+        "rover_udev",
         "roverrobotics_ros2",
-        "can_service",
         "colcon_build",
-        "rover_startup_script_pro2",
-        "setup_launch_pro2",
+        "rover_startup_script_pro",
+        "setup_launch_pro",
         "start_rover_ros2_services"
     ],
     "Rover Zero2 ROS2": [
         "uninstall_scripts",
         "prereq",
+        "install_utils",
         "rover_ros_subsystem_files",
-        "create_udev",
+        "rover_udev",
         "roverrobotics_ros2",
-        "can_service",
         "colcon_build",
-        "rover_startup_script_zero2",
-        "setup_launch_zero2",
+        "rover_startup_script_zero",
+        "setup_launch_zero",
         "start_rover_ros2_services"
     ],
     "Slam and Lidar Pack": [
