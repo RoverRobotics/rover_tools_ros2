@@ -170,7 +170,7 @@
                 "source ~/rover_workspace/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyACM0",
-                "ros2 launch roverrobotics_driver zero_teleop.launch.py",
+                "ros2 launch roverrobotics_driver zero2_teleop.launch.py",
                 "PID=$!",
                 "wait \"$PID\"",
                 "EOF2",
@@ -302,8 +302,8 @@
     "setup_launch_zero": [
         {
             "replace_launch_file": [
-                "sudo sed -i 's/placeholder/$KEY_ZERO_LAUNCH/g' /usr/sbin/roverrobotics",
-                "if grep \"$KEY_ZERO_LAUNCH\" /usr/sbin/roverrobotics",
+                "sudo sed -i 's/placeholder/$KEY_ZERO2_LAUNCH/g' /usr/sbin/roverrobotics",
+                "if grep \"$KEY_ZERO2_LAUNCH\" /usr/sbin/roverrobotics",
                 "then",
                 "    echo \"replace_launch_file: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
@@ -334,6 +334,8 @@
                 "KERNEL==\"ttyUSB[0-9]\", ATTRS{idVendor}==\"0403\", ATTRS{serial}==\"Rover Zero 2\", MODE:=\"0777\", SYMLINK+=\"rover-zero-v2\", RUN+=\"/bin/setserial /dev/%k low_latency\" ",
                 "# rover pro",
                 "KERNEL==\"ttyUSB[0-9]\", ATTRS{idVendor}==\"0403\", ATTRS{serial}==\"Rover Pro\", MODE:=\"0777\", SYMLINK+=\"rover-pro\", RUN+=\"/bin/setserial /dev/%k low_latency\"",
+                "# rover zero v2 with microusb",
+                "KERNEL==\"ttyACM[0-9]\", ATTRS{idVendor}==\"0483\", MODE:=\"0777\", SYMLINK+=\"rover-zero-v2\", RUN+=\"/bin/setserial /dev/%k low_latency\"",
                 "EOF8",
                 "sudo udevadm control --reload-rules && sudo udevadm trigger",
                 "if [ -f /etc/udev/rules.d/55-roverrobotics.rules ]",
