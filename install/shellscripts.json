@@ -32,6 +32,11 @@
             "clone_source_and_build": [
                 "sudo apt install ros-$DISTRO-slam-toolbox",
                 "source ~/opt/ros/$DISTRO/setup.bash",
+                "source install/setup.sh",
+                "cd ~/rover_workspace/src",
+                "git clone $KEY_LIDAR_SOURCE",
+                "cd ~/rover_workspace",
+                "colcon build",
                 "source install/setup.sh"
             ]
         }
