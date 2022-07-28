@@ -11,9 +11,6 @@ pip3 install boto3
 pip3 install pexpect
 pip install six
 
-# Source ros2
-source ~/opt/ros/humble/setup.bash
-
 # Rosdep Install
 sudo apt install python3-rosdep2
 rosdep update
@@ -23,5 +20,6 @@ cwd=$(pwd)
 cf="${cwd}/../credentials.json"
 python3 ~/rover_tools_ros2/menu/menu_main.py --cf ${cf}
 
+# Source ros2
 source ~/opt/ros/humble/setup.bash
 source ~/rover_workspace/install/setup.sh
