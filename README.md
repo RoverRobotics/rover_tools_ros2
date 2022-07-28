@@ -7,7 +7,7 @@ Assumptions:
 - Ubuntu 22.04 Jammy Jellyfish is installed on device
 - ROS2 Humble installed**
 
-** We recommend pre-installing ROS2 Humble before running our script. The script can download and install humble but small issues have arisen in testing and pre installing helps mitigate all of these issues. Follow the ROS2 Humble install guide linked here: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
+** We **REQUIRE** pre-installing ROS2 Humble before running our script. The script can download and install humble but small issues have arisen in testing and pre installing helps mitigate all of these issues. Follow the ROS2 Humble install guide linked here: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
 
 Once these steps are completed you can move on to installing our tool:
 
