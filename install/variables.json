@@ -5,7 +5,7 @@
     "$KEYV_DS4_DRV": "ds4drv",
     "$KEY_ROVER_TESTS": "https://github.com/RoverRobotics/robottests -b main",
     "$KEYV_ROVER_TESTS": "robottests",
-    "$KEY_ROVER_ROS2": "https://github.com/RoverRobotics/roverrobotics_ros2.git",
+    "$KEY_ROVER_ROS2": "https://github.com/RoverRobotics/roverrobotics_ros2.git -b ros2-foxy-driver",
     "$KEYV_ROVER_ROS2": "roverrobotics_ros2",
     "$KEY_RPI_ROS": "https://github.com/jackarivera/sllidar_ros2_humble.git",
     "$KEYV_RPI_ROS": "sllidar_ros2",
@@ -19,5 +19,5 @@
     "$KEY_VERIFICATION_FILE": "~/rr-install-verification.file",
     "$KEY_IMU_SOURCE": "https://github.com/jackarivera/ros2_bno055_driver.git",
     "$KEY_LIDAR_SOURCE": "https://github.com/jackarivera/sllidar_ros2",
-    "$DISTRO": "humble"
+    "$DISTRO": "foxy"
 }
