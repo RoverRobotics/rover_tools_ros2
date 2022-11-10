@@ -4,23 +4,21 @@ The ROS2 Rover Install Tool is designed to easily setup any rover robot. This is
 
 # Usage and Install
 Assumptions:
-- Ubuntu 22.04 Jammy Jellyfish is installed on device
-- ROS2 Humble installed**
-
-** We **REQUIRE** pre-installing ROS2 Humble before running our script. The script can download and install humble but small issues have arisen in testing and pre installing helps mitigate all of these issues. Follow the ROS2 Humble install guide linked here: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html
+- Ubuntu 20.04 Focal Fossa is installed on device
+- ROS2 Foxy Fitzroy
 
 Once these steps are completed you can move on to installing our tool:
 
 Start by cloning this repo: 
 ```
 cd ~/
-git clone https://github.com/roverrobotics/rover_tools_ros2
-cd ~/rover_tools
+git clone https://github.com/roverrobotics/rover_tools_ros2/foxy
+cd ~/rover_tools_ros2
 ```
 
 Next run the start.sh script by doing to following:
 ```
-cd ~/rover_tools
+cd ~/rover_tools_ros2
 ./start.sh
 ```
 
