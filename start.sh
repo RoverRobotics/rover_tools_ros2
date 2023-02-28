@@ -12,6 +12,7 @@ pip3 install console-menu
 pip3 install boto3
 pip3 install pexpect
 pip install six
+pip install colcon-common-extensions
 
 # Rosdep Install
 sudo apt install python3-rosdep2
