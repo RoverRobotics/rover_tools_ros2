@@ -391,8 +391,8 @@
         {
             "remove-rover_ws": [
                 "sed -i '/$DISTRO/d' ~/.bashrc",
-                "sed -i '/rover_tools_ros2/d' ~/.bashrc",
-                "sudo mv ~/rover_tools_ros2/ ~/rover_ws_old/",
+                "sed -i '/rover_workspace/d' ~/.bashrc",
+                "sudo mv ~/rover_workspace/ ~/rover_ws_old/",
                 "sudo rm -rf ~/library #librover and ps4 driver",
                 "sudo rm -rf /etc/udev/rules.d/55-roverrobotics.rules #rover udev",
                 "sudo rm -rf /etc/roverrobotics #env",
