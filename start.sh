@@ -34,4 +34,4 @@ python3 ~/rover_tools_ros2/menu/menu_main.py --cf ${cf}
 
 # Source ros2
 source ~/opt/ros/foxy/setup.bash
-source ~/rover_workspace/install/setup.sh
+source ~/rover_tools_ros2/install/setup.sh
