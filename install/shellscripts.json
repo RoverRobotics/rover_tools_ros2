@@ -33,9 +33,9 @@
                 "sudo apt install ros-$DISTRO-slam-toolbox",
                 "source ~/opt/ros/$DISTRO/setup.bash",
                 "source install/setup.sh",
-                "cd ~/rover_workspace/src",
+                "cd ~/rover_tools_ros2/src",
                 "git clone $KEY_LIDAR_SOURCE",
-                "cd ~/rover_workspace",
+                "cd ~/rover_tools_ros2",
                 "colcon build",
                 "source install/setup.sh"
             ]
@@ -44,9 +44,9 @@
     "install_imupack": [
         {
             "clone_source_and_build": [
-                "cd ~/rover_workspace/src",
+                "cd ~/rover_tools_ros2/src",
                 "git clone $KEY_IMU_SOURCE",
-                "cd ~/rover_workspace",
+                "cd ~/rover_tools_ros2",
                 "colcon build",
                 "source install/setup.sh"
             ]
@@ -90,9 +90,9 @@
     "rpilidar_repo": [
         {
             "download_rpi_lidar": [
-                "cd ~/rover_workspace/src/",
+                "cd ~/rover_tools_ros2/src/",
                 "git clone $KEY_RPI_ROS $KEYV_RPI_ROS",
-                "if [ -d ~/rover_workspace/src/$KEYV_RPI_ROS ]",
+                "if [ -d ~/rover_tools_ros2/src/$KEYV_RPI_ROS ]",
                 "then",
                 "    echo \"rpilidar_repo: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
@@ -106,7 +106,7 @@
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
                 "#!/bin/bash",
-                "source ~/rover_workspace/install/setup.sh",
+                "source ~/rover_tools_ros2/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyUSB0",
                 "ros2 launch roverrobotics_driver mini_teleop.launch.py",
@@ -128,7 +128,7 @@
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
                 "#!/bin/bash",
-                "source ~/rover_workspace/install/setup.sh",
+                "source ~/rover_tools_ros2/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyUSB0",
                 "ros2 launch roverrobotics_driver mega_teleop.launch.py",
@@ -150,7 +150,7 @@
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
                 "#!/bin/bash",
-                "source ~/rover_workspace/install/setup.sh",
+                "source ~/rover_tools_ros2/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyUSB0",
                 "ros2 launch roverrobotics_driver pro_teleop.launch.py",
@@ -172,7 +172,7 @@
             "create_startup_script": [
                 "cat << \"EOF2\" | sudo tee /usr/sbin/roverrobotics",
                 "#!/bin/bash",
-                "source ~/rover_workspace/install/setup.sh",
+                "source ~/rover_tools_ros2/install/setup.sh",
                 "source /etc/roverrobotics/env.sh",
                 "sudo chmod 666 /dev/ttyUSB0",
                 "ros2 launch roverrobotics_driver zero2_teleop.launch.py",
@@ -239,12 +239,12 @@
     "roverrobotics_ros2": [
         {
             "download_roverrobotics_ros2": [
-                "mkdir -p ~/rover_workspace/src",
-                "cd ~/rover_workspace/src/",
+                "mkdir -p ~/rover_tools_ros2/src",
+                "cd ~/rover_tools_ros2/src/",
                 "git clone $KEY_ROVER_ROS2",
-                "cd ~/rover_workspace",
+                "cd ~/rover_tools_ros2",
                 "rosdep install -i --from-path src --ignore-src",
-                "if [ -d ~/rover_workspace/src/$KEYV_ROVER_ROS2 ]",
+                "if [ -d ~/rover_tools_ros2/src/$KEYV_ROVER_ROS2 ]",
                 "then",
                 "    echo \"download_roverrobotics_ros2: Success\" >> $KEY_VERIFICATION_FILE",
                 "else",
@@ -362,9 +362,9 @@
     "colcon_build": [
         {
             "update_ros_dep": [
-                "cd ~/rover_workspace",
+                "cd ~/rover_tools_ros2",
                 "rosdep install --from-paths src --ignore-src -r -y",
-                "echo source ~/rover_workspace/install/setup.sh >> ~/.bashrc",
+                "echo source ~/rover_tools_ros2/install/setup.sh >> ~/.bashrc",
                 "echo source /opt/ros/$DISTRO/setup.bash >> ~/.bashrc",
                 "source ~/.bashrc",
                 "source /opt/ros/$DISTRO/setup.bash",
@@ -376,7 +376,7 @@
         {
             "start_roverrobotics_service": [
                 "source /opt/ros/$DISTRO/setup.bash",
-                "source ~/rover_workspace/install/setup.sh",
+                "source ~/rover_tools_ros2/install/setup.sh",
                 "sudo systemctl start roverrobotics.service",
                 "if sudo systemctl status roverrobotics.service | grep -i running",
                 "then",
@@ -391,8 +391,8 @@
         {
             "remove-rover_ws": [
                 "sed -i '/$DISTRO/d' ~/.bashrc",
-                "sed -i '/rover_workspace/d' ~/.bashrc",
-                "sudo mv ~/rover_workspace/ ~/rover_ws_old/",
+                "sed -i '/rover_tools_ros2/d' ~/.bashrc",
+                "sudo mv ~/rover_tools_ros2/ ~/rover_ws_old/",
                 "sudo rm -rf ~/library #librover and ps4 driver",
                 "sudo rm -rf /etc/udev/rules.d/55-roverrobotics.rules #rover udev",
                 "sudo rm -rf /etc/roverrobotics #env",
