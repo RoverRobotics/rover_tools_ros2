@@ -9,6 +9,7 @@ sudo apt install cmake
 pip3 install console-menu
 pip3 install boto3
 pip3 install pexpect
+pip install colcon-common-extensions
 pip install six
 
 # Rosdep Install
