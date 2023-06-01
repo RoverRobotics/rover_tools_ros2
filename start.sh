@@ -17,6 +17,7 @@ sudo apt install net-tools
 sudo apt install can-utils
 sudo apt install git
 sudo apt install cmake
+sudo apt install ros-humble-joy-linux
 pip3 install console-menu
 pip3 install boto3
 pip3 install pexpect
