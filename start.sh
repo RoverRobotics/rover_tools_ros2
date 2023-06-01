@@ -6,6 +6,7 @@ sudo apt-get install screen -y
 sudo apt-get install nano -y
 sudo apt install net-tools
 sudo apt install cmake
+sudo apt install ros-humble-joy-linux
 pip3 install console-menu
 pip3 install boto3
 pip3 install pexpect
