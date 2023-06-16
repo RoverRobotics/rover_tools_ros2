@@ -26,6 +26,8 @@ cd ~/rover_tools
 
 Once the script installs its required dependencies, you will be brought to a menu. Follow the menu and install for your respective robot.
 
+** To install the mini or MĪTI version you will need to power on your robot and connect it to the computer running the script via the USB cable. **
+
 # Troubleshooting
 If the install script has failed, view the detailed log by running the following command
 
